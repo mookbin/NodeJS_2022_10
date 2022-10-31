@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "node_01",
+  "description": "- http import 하기 : `import http from \"http\"`\r - 서버 생성하기 : `http://createServer(callback)`",
+  "version": "1.0.0",
+  "main": "www.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mookbin/NodeJS_2022_10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mookbin/NodeJS_2022_10/issues"
+  },
+  "homepage": "https://github.com/mookbin/NodeJS_2022_10#readme"
+}
