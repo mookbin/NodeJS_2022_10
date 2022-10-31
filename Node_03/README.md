@@ -40,15 +40,27 @@ import express from "express"
 const app = express();
 export default app;
 
-````
-
 #### router 모듈 분리하기
-* router 모듈은 express 에서 여러가지 Request 를 처리하기 위한
-모듈이다.
-* router 모듈은 app.js 에서 선언을 한다
-* router 모듈을 모두 app.js 에서 선언을 하게 되면 app.js 가
-너무 복잡한 코드가 되어 버린다.
-* router 모듈을 분리하여 각 역할별로 처리하도록 한다
-1. ```routes``` 폴더를 생성
 
-````
+- router 모듈은 express 에서 여러가지 Request 를 처리하기 위한
+  모듈이다.
+- router 모듈은 app.js 에서 선언을 한다
+- router 모듈을 모두 app.js 에서 선언을 하게 되면 app.js 가
+  너무 복잡한 코드가 되어 버린다.
+- router 모듈을 분리하여 각 역할별로 처리하도록 한다
+
+1. `routes` 폴더를 생성
+2. router module 파일 작성 : ` root.js`, `user.js`작성
+
+```
+import express from "express"'
+const router = express.Router();
+router.get("/", ()=>{});
+export default router;
+```
+
+### Mysql 연동
+
+- mysql2 dependency 설정 확인 및 설치:`npm install -save mysql2`
+
+* mysql 연동을 위한 mpdule 생성 : `modules/mysqlDB.js`파일 생성
