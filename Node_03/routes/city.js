@@ -168,7 +168,9 @@ router.get("/gnp/:start?/:end", (req, res) => {
   }
 
   const sql = "SELECT * FROM country WHERE gnp BETWEEN ? AND ?";
-  mysql.execute(sql, [start, end], (err, result, field) => {});
+  mysql.execute(sql, [start, end], (err, result, field) => {
+    res.json(result);
+  });
 });
 
 // localhost:3000/city/도시이름 이라고 요청을 하면
