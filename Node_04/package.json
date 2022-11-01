@@ -1,0 +1,22 @@
+{
+  "main": "./bin/www.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./bin/www.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7"
+  },
+  "name": "node_04",
+  "description": "",
+  "version": "1.0.0",
+  "bin": {
+    "node_04": "bin/app.js"
+  },
+  "keywords": [],
+  "author": "beeen1@naver.com",
+  "license": "ISC"
+}
