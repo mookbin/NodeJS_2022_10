@@ -10,4 +10,4 @@
 
 ## 프로젝트 목록
 
-### :blue_heart: 학사정보 프로젝트
+### :hamster: [학사정보 프로젝트](https://github.com/mookbin/NodeJS_2022_10/tree/master/Node_06)
