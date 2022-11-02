@@ -30,11 +30,12 @@ router.post("/list", (req, res) => {
   console.log(name);
   const sql =
     // 따옴표 안에 앞 뒤 빈칸 넣기 필수
-    " SELECT * FROM country " + "WHERE name LIKE " + " CONCAT('%', ? , '%') ";
+    " SELECT * FROM country " + " WHERE name LIKE " + " CONCAT('%', ? , '%') ";
   mysql.execute(sql, [name], (err, countrys, fields) => {
     res.render("country", { countrys });
   });
 });
+
 router.get("/:name/get", (req, res) => {
   const name = req.params.name;
   const sql = "SELECT * FROM country Where name = ? ORDER BY code";
