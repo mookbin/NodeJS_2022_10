@@ -4,7 +4,7 @@ const mysqlConnConfig = {
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "!Biz8080",
+  password: "Kang1414!!",
   database: "schoolDB",
 };
 const dbConnection = mysql.createConnection(mysqlConnConfig);

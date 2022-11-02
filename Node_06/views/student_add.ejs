@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    h1,
+    form,
+    table {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    td,
+    th {
+      border-bottom: 1px solid #bbb;
+      border-top: 1px solid #bbb;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>학생정보</h1>
+
+  <form method="POST">
+    <label>학생 정보추가</label>
+
+  </form>
+  <div>
+    <a href="/student"><button>전체보기</button></a>
+  </div>
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>학번</th>
+          <th>학생 이름</th>
+          <th>학과</th>
+          <th>학년</th>
+          <th>전화번호</th>
+          <th>주소</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+    <div class="input_info">
+      <input name="add_num" placeholder="학번" />
+      <input name="add_name" placeholder="학생 이름" />
+      <input name="add_dept" placeholder="학과" />
+      <input name="add_grade" type="number" placeholder="학년" />
+      <input name="add_tel" placeholder="전화번호" />
+      <input name="add_addr" placeholder="주소" />
+      <button class="score_add">입력</button>
+    </div>
+  </section>
+
+</body>
+
+</html>

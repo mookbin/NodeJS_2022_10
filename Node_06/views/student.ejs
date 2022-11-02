@@ -25,9 +25,13 @@
     <form method="POST">
       <label>학생이름</label>
       <input name="s_name" />
-      <button id="btnWide">전체보기</button>
-      <button id="btnAdd">추가</button>
+
     </form>
+    <div>
+      <a href="/student"><button>전체보기</button></a>
+      <a href="/student/add"><button>추가</button></a>
+    </div>
+    <section>
     <table>
       <thead>
         <tr>
@@ -53,5 +57,6 @@
         <% }) %>
       </tbody>
     </table>
+    </section>
   </body>
 </html>
