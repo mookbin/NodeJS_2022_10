@@ -8,19 +8,7 @@
 article.student.input {
   text-align: center;
 }
-input {
-  margin: 5px;
-  padding: 8px;
-  border: 1px solid #bbb;
-  outline: none;
-  border-radius: 5px;
-}
-input:focus {
-  background-color: #ddd;
-}
-input:hover {
-  background-color: #eee;
-}
+
 article.student.search form {
   width: 50%;
   text-align: center;
