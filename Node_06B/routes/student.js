@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/insert", (req, res) => {
-  res.render("student/st_main", { body: "write" });
+  res.render("student/st_main", { body: "write", student: {} });
 });
 
 router.post("/insert", (req, res) => {
@@ -69,13 +69,45 @@ router.get("/:st_num/detail", (req, res) => {
    * 이러한 해킹 공격을 DB Enjection 공격이라고 한다
    * 매우 주의해야한다!
    */
+
   //const sql = `SELECT  * FROM tbl_student
   //WHERE st_num = ${st_num}`;
   const sql = "SELECT * FROM tbl_student WHERE st_num =?";
   mysql.execute(sql, [st_num], (err, student, field) => {
     // res.json(student);
-    res.render("student/st_main", { body: "detail", student });
+    res.render("student/st_main", { body: "detail", student: student[0] });
   });
+});
+
+/**
+ * /student/학번/update 로 Request 가 되면
+ * Db 에서 학생정보를 SELECT 하고
+ * st_write 로 보내서 input box 에 정보를 표시하기
+ */
+
+router.get("/:st_num/update", (req, res) => {
+  const st_num = req.params.st_num;
+  const sql = "SELECT * FROM tbl_student WHERE st_num =?";
+  mysql.execute(sql, [st_num], (err, student, field) => {
+    res.render("student/st_main", { body: "write", student: student[0] });
+  });
+});
+
+router.post("/:st_num/update", (req, res) => {
+  const [st_num, st_name, st_dept, st_grade, st_tel, st_addr] = req.body;
+  const sql = `UPDATE tbl_student SET st_name = ?, st_dept=?, st_grade = ?, st_tel = ? st_addr = ? WHERE st_num= ?`;
+
+  //변경되었으면 변경된 학생의 정보를 보여주기
+  mysql.execute(
+    sql,
+    [st_name, st_dept, st_grade, st_tel, st_addr],
+    (err, result, field) => {
+      if (err) {
+        res.send(err);
+      }
+      res.redirect(`/student/${st_num}/detail`);
+    }
+  );
 });
 
 export default router;

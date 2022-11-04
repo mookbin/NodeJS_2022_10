@@ -5,6 +5,7 @@ import logger from "morgan";
 //router import
 import indexRouter from "../routes/index.js";
 import studentRouter from "../routes/student.js";
+
 const app = express();
 
 //app(express) 서버에 middle ware 설정하기
@@ -54,4 +55,5 @@ app.use("/", (req, res, next) => {
 
 app.use("/", indexRouter);
 app.use("/student", studentRouter);
+
 export default app;
