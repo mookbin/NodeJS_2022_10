@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <%- include ("includes/head.ejs") %>
+
+<head>
+  <%- include ("includes/head.ejs") %>
     <style>
       /*
       dash box 를 flex 로 설정하고
@@ -19,6 +20,7 @@
         padding: 0.6em;
         cursor: pointer;
       }
+
       .dash.box .more {
         margin-left: auto;
         opacity: 0;
@@ -29,9 +31,10 @@
         opacity: 1;
       }
     </style>
-  </head>
-  <body>
-    <%- include ("includes/header.ejs") %>
+</head>
+
+<body>
+  <%- include ("includes/header.ejs") %>
     <section class="main">
       <article>
         <div class="dash box student">
@@ -44,11 +47,12 @@
       <article></article>
     </section>
     <%- include ("includes/footer.ejs") %>
-  </body>
-  <script>
-    const st_box = document.querySelector(".dash.box.student");
-    st_box?.addEventListener("click", () => {
-      document.location.href = "/student";
-    });
-  </script>
+</body>
+<script>
+  const st_box = document.querySelector(".dash.box.student");
+  st_box?.addEventListener("click", () => {
+    document.location.href = "/student";
+  });
+</script>
+
 </html>
