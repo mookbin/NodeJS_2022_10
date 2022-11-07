@@ -7,7 +7,8 @@ const serverOption = {
   port: 3000,
 };
 server.on("listening", () => {
-  console.log(`ServerStart!! ${serverOption.host}:${serverOption.port}`);
+  console.log(
+    `Server Start!! http://${serverOption.host}:${serverOption.port}`
+  );
 });
-
 server.listen(serverOption);
