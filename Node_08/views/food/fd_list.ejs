@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <table class="food list">
+    <thead>
+      <tr>
+        <th>날짜</th>
+        <th>식품명</th>
+        <th>섭취량</th>
+        <th>칼로리</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% foods.forEach( (fd)=>{ %>
+      <tr data-fd_num="<%- fd.fd_num %>">
+        <td><%= fd.fd_date %></td>
+        <td><%= fd.fd_name %></td>
+        <td><%= fd.fd_num %></td>
+        <td><%= fd.fd_cal %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</html>

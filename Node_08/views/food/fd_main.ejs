@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <%- include ("../includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/food.css" />
+    <script src="/js/fd_list.js"></script>
+  </head>
+
+  <body>
+    <%- include ("../includes/header.ejs") %> <% if(body=="list" ) { %> <% } %>
+    <section class="main">
+      <article>
+        <% if(body=="list" ) { %> <%- include ("./fd_list.ejs") %> <% } %> <%
+        if(body=="write" ) { %> <%- include ("./fd_write.ejs") %> <% } %>
+      </article>
+    </section>
+    <% if(body=="list" ) { %> <%- include ("../includes/footer.ejs") %>
+  </body>
+</html>

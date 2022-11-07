@@ -1,0 +1,38 @@
+<form method="POST" class="fd_input">
+  <fieldset>
+    <legend>칼로리정보</legend>
+    <div>
+      <label for="fd_date">날짜</label>
+      <input name="fd_date" id="fd_date" />
+    </div>
+    <div>
+      <label for="fd_name">식품명</label><input name="fd_name" id="fd_name" />
+    </div>
+    <div>
+      <label for="fd_num">섭취량</label
+      ><input type="number" name="fd_num" id="fd_num" />
+    </div>
+    <div>
+      <label for="fd_cal">칼로리</label
+      ><input type="number" name="fd_cal" id="fd_cal" />
+    </div>
+
+    <div>
+      <label></label>
+      <button type="button" class="btn submit">저장</button>
+    </div>
+  </fieldset>
+  <script>
+    const fd_num = `<%- food.fd_num %>`;
+    if (fd_num) {
+      const numInput = document.querySelector("input[name='fd_num']");
+      numInput.setAttribute("readonly", "readonly");
+    }
+    const food = JSON.parse(`<%- JSON.stringify(food) %>`);
+    const fdInput = document.querySelectorAll("input");
+    const fdItems = Object.keys(food);
+    for (let i = 0; i < fdItems.length; i++) {
+      fdInput[i].value = food[`${fdInput[i].name}`];
+    }
+  </script>
+</form>

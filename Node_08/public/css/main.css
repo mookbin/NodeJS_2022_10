@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 2em;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 166, 0);
+  text-align: center;
+}
+
+footer {
+  background-color: #bbb;
+  font-size: 8px;
+  text-align: center;
+  padding: 1em;
+}
+
+section.main {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+}
+
+section.main article {
+  flex: 1;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #bbb;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+}
+
+table.food td,
+table.food th {
+  text-align: left;
+  padding: 5px 8px;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  table-layout: fixed;
+}
+
+input {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #bbb;
+  outline: none;
+  border-radius: 5px;
+}
+
+input:focus {
+  background-color: #ddd;
+}
+
+input:hover {
+  background-color: #eee;
+}
