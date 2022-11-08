@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
         case "st_list":
           reqURL = "/student";
+          break;
       }
       document.location.href = reqURL;
     }
