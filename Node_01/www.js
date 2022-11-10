@@ -70,7 +70,7 @@ app.get("/input", (req, res) => {
 });
 
 /**
- * form 에서 입력한 대이터를 POST method 로 받기
+ * form 에서 입력한 데이터를 POST method 로 받기
  * form 에서 입력한 데이터를 POST 로 보내면
  * form package 의 body 영역에 데이터가 포장되어서
  *      전송된다
