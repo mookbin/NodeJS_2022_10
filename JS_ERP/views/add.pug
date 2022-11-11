@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+    form(method="POST").buyer
+        input(name="t_seq", value="0")
+        tr 
+            td
+                input(name="c_num"  placeholder="거래처 ID를 입력하세요" title="거래처ID")
+            td
+                input(name="c_name"  placeholder="거래처이름을 입력하세요" title="거래처명")
+            td
+                input(name="c_tel" placeholder="연락처를 입력하세요" title="전화번호")
+            td
+                input(name="c_name2" placeholder="담당자명을 입력하세요" title="담당자명")
+            td
+                input(name="c_tel2" placeholder="주소를 입력하세요" title="주소")
+            td
+                button(type="button").buyer.add 저장  
+                button(type="button").buyer.reset 새로작성
+                button(type="button").buyer.list 리스트로 

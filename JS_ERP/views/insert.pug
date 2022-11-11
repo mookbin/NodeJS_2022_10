@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    table.buyer 
+        thead  
+            th 고객ID 
+            th 이름
+            th 전화번호
+            th 담당자명
+            th 담당자 연락처
+            th 매출액합계
+        tbody 
+            each buyer in buyers 
+                tr(data-seq= `${buyer.t_seq}`)
+
+                    td(title="c_num")= buyer.c_num
+                    td(title="c_name")= buyer.c_name
+                    td(title="c_tel")= buyer.c_tel
+                    td(title="c_name2")= buyer.c_name2
+                    td(title="c_tel2")= buyer.c_tel2
+                    td(title="c_sum")= buyer.c_sum
+
+
+    button(type="button").buyer.input 거래처추가  
