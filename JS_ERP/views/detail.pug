@@ -1,3 +1,57 @@
 extends layout
 
+
 block content
+    link(rel='stylesheet', href='/css/buyer.css')
+    script(src="/js/detail.js")
+    div.detail_container
+      table.detail
+        tr
+          th ID
+          td(title="c_num")= buyers.c_num
+          th 전화번호
+          td(title="c_tel")= buyers.c_tel
+        tr
+          th 이름
+          td(title="c_name")= buyers.c_name
+          th 담당자명
+          td(title="c_name2")= buyers.c_name2
+        tr
+          th 주소
+          td(title="c_addr" colspan="3")= buyers.c_addr
+      div(data-num= `${buyers.c_num}`).btn_container
+        button.buyer_update 정보수정
+        button.buyer_delete 정보삭제
+    table.data
+      thead
+        tr 
+          th No.
+          th 거래일자
+          th 상품명
+          th 단가
+          th 수량
+          th 금액
+      tbody 
+        tr
+          td 1
+          td 2022-11-01
+          td 아이폰 13
+          td 1,200,000
+          td 10
+          td 12,000,000
+        tr
+          td 2
+          td 2022-11-03
+          td 갤럭시 폴드
+          td 1,500,000
+          td 10
+          td 15,000,000
+        tr
+          td 합계
+          td 
+          td 2
+          td 
+          td 
+          td 27,000,000  
+    div.btn_box
+      button 주문추가

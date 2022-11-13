@@ -24,8 +24,8 @@ export default (sequelize) => {
         type: Sequelize.DataTypes.STRING(15),
         allowNull: true,
       },
-      c_sum: {
-        type: Sequelize.DataTypes.INTEGER,
+      c_addr: {
+        type: Sequelize.DataTypes.STRING(125),
         allowNull: true,
       },
     },

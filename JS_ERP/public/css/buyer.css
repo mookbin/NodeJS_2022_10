@@ -50,18 +50,85 @@ footer {
 
 table {
   border-collapse: collapse;
-  width: 95%;
+  width: 100%;
 }
 
 table.buyer td,
 table.buyer th {
   text-align: left;
-  padding: 5px 8px;
-  border-top: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
-
+  padding: 5px 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   white-space: nowrap;
-  text-overflow: ellipsis;
-  table-layout: fixed;
   cursor: pointer;
+}
+
+table.detail {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 50%;
+  border: 1px solid black;
+}
+
+button {
+  background-color: rgb(0, 150, 20);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+}
+
+table.detail th,
+table.detail td {
+  border: 1px solid black;
+
+}
+
+table.detail th {
+  width: 5em;
+}
+
+table.detail td {
+  width: 10em;
+  padding: 1em;
+}
+
+table.data {
+  width: 100%;
+}
+
+table.data tbody td {
+  padding: 0.5em;
+  border-bottom: 1px solid black ;
+  text-align: center;
+}
+
+div.btn_box {
+  width: 90%;
+}
+
+button.buyer_add {
+  margin-left: auto;
+}
+
+table.list {
+  width: 90%;
+}
+
+input {
+  width: 60%;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  outline: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+input:focus {
+  background-color: #ddd;
+}
+
+input:hover {
+  background-color: #eee;
 }

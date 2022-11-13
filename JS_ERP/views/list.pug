@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    link(rel='stylesheet', href='/css/buyer.css')
+    script(src="js/list.js")
     table.buyer 
         thead  
             th 고객ID 
@@ -8,17 +10,16 @@ block content
             th 전화번호
             th 담당자명
             th 담당자 연락처
-            th 매출액합계
+            th 매출액합계(만원)
         tbody 
             each buyer in buyers 
-                tr(data-seq= `${buyer.t_seq}`)
-
+                tr(data-num= `${buyer.c_num}`)
                     td(title="c_num")= buyer.c_num
                     td(title="c_name")= buyer.c_name
                     td(title="c_tel")= buyer.c_tel
                     td(title="c_name2")= buyer.c_name2
                     td(title="c_tel2")= buyer.c_tel2
-                    td(title="c_sum")= buyer.c_sum
+                    td
 
 
-    button(type="button").buyer.input 거래처추가  
+    button(type="button").buyer_input 거래처 추가  
