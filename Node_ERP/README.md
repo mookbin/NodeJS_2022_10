@@ -23,7 +23,4 @@ sequelize-auto -d erpDBV2 -h localhost -u root -x !Biz8080
 
 # gradient
 
-```
 http://cssgradient.io/
-
-```
