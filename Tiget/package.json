@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node ./bin/www.js"
+    "start": "node ./bin/www.js",
+    "build:css": "postcss public/css/tailwind.css -o public/css/styles.css"
   },
   "dependencies": {
     "cookie-parser": "~1.4.6",
@@ -13,6 +14,7 @@
     "http-errors": "~2.0.0",
     "morgan": "~1.10.0",
     "mysql2": "~2.3.3",
+    "postcss-cli": "^10.0.0",
     "pug": "~3.0.2",
     "sequelize": "~6.25.5"
   },

@@ -122,7 +122,6 @@ input {
   border: 1px solid #bbb;
   outline: none;
   border-radius: 5px;
-  flex: 1;
 }
 
 input:focus {

@@ -1,5 +1,15 @@
-extends layout
-
+doctype html 
+html
+  head
+    link(href='./css/styles.css', rel='stylesheet')
+    title My app
+  body 
+    h1.text-2xl  Tiget  
+    p.mt12  소개글
+    div.text-red-500  어쩌구 저쩌구
+    div 티겟
+    input(name="username",placeholder="USERNAME",title="사용자 ID")
+    input(name="password", type="password", placeholder="PASSWORD",title="비밀번호")
+    button(type="button").user.login 로그인
 block content
-  h1= title
-  p Welcome to #{title}
+

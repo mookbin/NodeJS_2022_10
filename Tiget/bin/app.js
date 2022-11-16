@@ -10,7 +10,6 @@
 import express from 'express';
 import createError from 'http-errors';
 import path from 'path';
-
 // 3rd party lib modules  
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
