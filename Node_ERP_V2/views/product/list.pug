@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+    link(rel="stylesheet", href="/css/product/list.css")
+    script(src="/js/product/list.js")
+    table.product.list   
+        thead
+            tr  
+                th SEQ
+                th 상품코드
+                th 상품명
+                th 대분류
+                th 중분류
+                th 소분류
+                th 제조사
+                th 주요매입처
+                th 매입단가
+                th 과세여부
+                th 판매단가
+        tbody 
+            each product, index in products 
+                tr(data-p_code=`${buyer.p_code}`)
+                    td= index + 1
+                    td= product.p_code
+                    td= product.p_title
+                    td= product.p_main_cat
+                    td= product.p_mid_cat
+                    td= product.p_sub_cat
+                    td= product.p_industry
+                    td= product.p_buyer 
+                    td= product.p_iprice
+                    td= product.p_tax
+                    td= product.p_oprice
+    div.button.box
+        button.product.insert 상품추가 
