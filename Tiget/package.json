@@ -16,7 +16,8 @@
     "mysql2": "~2.3.3",
     "postcss-cli": "^10.0.0",
     "pug": "~3.0.2",
-    "sequelize": "~6.25.5"
+    "sequelize": "~6.25.5",
+    "tailwindscss": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

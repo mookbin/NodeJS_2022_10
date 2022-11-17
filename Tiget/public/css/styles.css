@@ -1,9 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-body{
-background-image: url(/Tiget/public/images/maxresdefault.jpg) ;
-background-size: cover;
-}
