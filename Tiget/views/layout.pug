@@ -1,11 +1,24 @@
 doctype html
 html
-  head
+head
+  link(rel="stylesheet", href="css/styles.css")
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  title footer
+section.footer
+  div.social
+    a(href='#')
+      i.fab.fa-instagram
+    a(href='#')
+      i.fab.fa-twitter
+    a(href='#')
+      i.fab.fa-facebook
+  ul.list
+    li
+      a(href='#') home1
+    li
+      a(href='#') 2
+    li
+      a(href='#') 3
+  p.copyright Tiget @ 2022
 
-    link(rel='stylesheet', href='/css/styles.css')
-    script(src="https://cdn.tailwindcss.com")
-    title= title
-  body
-    h1.text-red-500 안녕하세요
 block content
-
