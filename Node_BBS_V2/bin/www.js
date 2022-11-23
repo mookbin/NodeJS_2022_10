@@ -22,7 +22,7 @@ const normalizePort = (val) => {
 };
 
 
-const debug = createDebug('tigetv2:server');
+const debug = createDebug('node-bbs:server');
 const port = normalizePort(process.env.PORT || "3000");
 
 /**
