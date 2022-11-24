@@ -8,10 +8,10 @@ block content
             legend 글쓰기 
             div
                 label(for="b_date") 작성일자
-                input(name="b_date" title="작성일자")#b_date
+                input(name="b_date" value=bbs.b_date, title="작성일자")#b_date
             div
                 label(for="b_time") 작성시각
-                input(name="b_time", value=bbs.b_date, title="작성시각")#b_time
+                input(name="b_time", value=bbs.b_time, title="작성시각")#b_time
             div
                 label(for="b_writer") 작성자ID
                 input(name ="b_writer", value=bbs.b_writer, title= "작성자ID")#b_writer
