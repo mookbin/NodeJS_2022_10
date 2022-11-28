@@ -6,6 +6,7 @@ block content
         const id = `#{bbs._id}`
     script(src="/js/detail.js")
     link(rel="stylesheet",href="/css/detail.css")
+    link(rel="stylesheet",href="/css/bbs_images.css")
     article.bbs.detail
         div.label 작성일자
         div.data= bbs.b_date 
@@ -31,4 +32,17 @@ block content
                     span.comment.delete(data-id=`${comm._id}`) &times;
         button.comment 댓글추가 
         input.comment
-         
+    article.bbs.images
+        div.image.box
+            div.images 
+                img(src="/images/image_1.jpg", alt="")
+                img(src="/images/image_2.jpg", alt="")
+                img(src="/images/image_3.jpg", alt="")
+                img(src="/images/image_4.jpg", alt="")
+                img(src="/images/image_5.jpg", alt="")
+
+                img(src="/images/image_1.jpg", alt="")
+                img(src="/images/image_2.jpg", alt="")
+                img(src="/images/image_3.jpg", alt="")
+                img(src="/images/image_4.jpg", alt="")
+                img(src="/images/image_5.jpg", alt="")

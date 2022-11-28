@@ -14,37 +14,13 @@ import path from "path";
 // 3rd party lib modules
 import cookieParser from "cookie-parser";
 import logger from "morgan";
-import mongoose from "mongoose";
-import { atlasURL } from "../config/mongoDB.js";
 
 // sample router modules
 import indexRouter from "../routes/index.js";
 import usersRouter from "../routes/users.js";
-import apiRouter from "../routes/api.js";
 
 // create express framework
 const app = express();
-
-/**
- * mongoDB 와 mongoose 를 연동하는 프로잭트애서
- * 사용하는 event 핸들러를 위한 객체
- */
-const dbConn = mongoose.connection;
-// mongoose 를 통해서 mongoDB 에 접속이 정상적으로
-// 되었을 때 최초에 한번 실행되는 event 핸들러
-dbConn.once("open", () => {
-  console.log("Nothing Open Ok!!");
-});
-// db 연결 후 문제가 발생하면 호출되는 event 핸들러
-dbConn.on("error", (err) => {
-  if (err) {
-    console.error(err``);
-  }
-});
-
-// mongoose 를 통하여 mongoDB에 연결하기
-// mongoDB 연결을 비동기(async) 방식으로 수행하기
-await mongoose.connect(atlasURL);
 
 // Disable the fingerprinting of this web technology.
 app.disable("x-powered-by");
@@ -62,7 +38,6 @@ app.use(express.static(path.join("public")));
 
 // router link enable
 app.use("/", indexRouter);
-app.use("/api", apiRouter);
 app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler

@@ -1,5 +1,5 @@
 div.label {
-  background-color: #ddd;
+  background-color: rgb(255, 255, 255);
   text-align: right;
   font-weight: 900;
 }
@@ -12,7 +12,29 @@ n + 5 : 0번부터 시작하여 5번위치, 6번위치의 div.label 에
 */
 
 div.label:nth-of-type(n + 5) {
-  background-color: #eee;
+  background-color: rgb(255, 255, 255);
+}
+
+div.comments {
+  width: 80%;
+  margin: 100px auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  padding: 10px;
+}
+
+div.comments.input {
+  margin: 30px;
+  padding: 10px;
+  width: 90%;
+  padding-left: 120px;
+  display: flex;
+  text-align: left;
+  justify-content: right;
+}
+
+p {
+  border-bottom: 1px solid black;
 }
 
 article.bbs.detail {
@@ -21,16 +43,85 @@ article.bbs.detail {
 }
 
 article.bbs.detail div {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(255, 255, 255);
   padding: 12px 16px;
   margin: 3px;
   white-space: nowrap;
 }
 
-div.bbs.comments {
+article.detail div:nth-of-type(2n) {
+  background-color: rgb(255, 255, 255);
   width: 80%;
-  margin: 5px auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button.comment,
+button.bbs {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  margin: 10px;
+  float: right;
+}
+
+button.bbs.update {
+  margin-right: 80px;
+}
+button.comment {
+  border: 1px solid black;
+}
+button.comment:hover,
+button.bbs:hover {
+  background-color: rgb(160, 228, 255);
+  color: white;
+  font-weight: bold;
+}
+
+article.bbs.comments {
+  width: 80%;
+  margin: 10px auto;
+}
+
+p.comment.list.box {
   display: flex;
-  flex-direction: column;
-  border: 1px solid #aaa;
+}
+
+span.comment {
+  flex: 2;
+  padding: 5px;
+  line-height: 20px;
+}
+
+span.comment.writer {
+  flex: 1 !important;
+  text-align: center;
+}
+
+span.comment.content {
+  text-align: left;
+  font-weight: 700;
+}
+
+span.comment.delete {
+  flex: 1 !important;
+  color: #777;
+  text-align: center;
+  cursor: pointer;
+  /* 1em : 주위의 폰트 크기와 1:1, 2em 2배만큼 크게*/
+  font-size: 2em;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+/*
+comment 의 
+*/
+p.comment.list.box:hover span.comment.delete {
+  opacity: 1;
 }

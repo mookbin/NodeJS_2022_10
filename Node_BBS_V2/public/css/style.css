@@ -1,4 +1,4 @@
-/* * {
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -16,9 +16,9 @@ body {
   flex-direction: column;
   background: linear-gradient(
     90deg,
-    rgb(195, 192, 255) 0%,
-    rgb(219, 255, 244) 30%,
-    rgba(0, 212, 255, 1) 100%
+    rgb(255, 255, 255) 0%,
+    rgb(214, 219, 255) 30%,
+    rgb(206, 192, 245) 100%
   );
 }
 
@@ -33,16 +33,20 @@ table {
   border-collapse: collapse;
   width: 80%;
   margin: 10px auto;
-} */
+}
 
-/* table.bbs.list td,
+table.bbs.list td,
 table.bbs.list th {
   text-align: left;
   padding: 5px 10px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(255, 255, 255);
   white-space: nowrap;
   cursor: pointer;
+}
+
+table.bbs.list th {
+  background-color: white;
 }
 
 button {
@@ -50,163 +54,30 @@ button {
   outline: none;
   border-radius: 5px;
   white-space: nowrap;
-}
-
-button.box {
-  padding: 12px 0;
-  text-align: right;
-  margin: 5px auto;
-}
-
-button.insert {
-  background-color: rgb(219, 255, 244);
-  color: black;
-  padding: 12px 16px;
+  transition-duration: 0.4s;
   cursor: pointer;
 }
 
-button:hover {
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
-}
-
-form.write {
-  width: 80%;
-
-  margin: 10px auto;
-}
-
-form.write fieldset {
-  border-radius: 10px;
-  background-color: white;
-}
-
-form.write div {
-  width: 90%;
-}
-
-form.write legend {
-  margin: 30px;
-  padding: 10px;
-  color: rgb(46, 190, 147);
-  font-weight: 900;
-}
-form.write div {
-  width: 90%;
-  margin: 5px auto;
-  display: flex;
-}
-
-form.write label,
-form.write input,
-form.write button {
-  padding: 8px;
-  margin: 3px;
-}
-
-form.write label {
-  flex: 1;
-  text-align: right;
-  color: rgb(46, 190, 147);
-  font-weight: bold;
-  white-space: nowrap;
-  user-select: none;
-}
-
-form.write input {
-  flex: 3;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-div.button.box {
-  justify-content: right;
-}
-
-div.button.box button {
-  margin: 12px 3px 12px 10px;
+button.insert {
+  background-color: rgb(255, 255, 255);
+  color: black;
   padding: 12px 16px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
+  margin: 30px;
+  float: right;
+  margin-right: 70px;
 }
 
-button.input {
-  background-color: rgb(46, 190, 147);
+button:hover {
+  background-color: rgb(160, 228, 255);
   color: white;
+  font-weight: bold;
 }
 
-button.list {
-  background-color: rgb(46, 190, 147);
-  color: white;
-}
-
-button.reset {
-  background-color: rgb(46, 190, 147);
-  color: white;
-}
-
-section.main {
-  flex: 1;
-}
-
-footer {
-  background-color: rgb(2, 19, 77);
-  color: white;
-  padding: 0.8em;
-  text-align: center;
-}
-
+textarea:hover,
 input:hover {
   background-color: #eee;
 }
 
 input:focus {
-  background-color: #ddd;
-}
-
-button {
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  white-space: nowrap;
-}
-
-button.box {
-  padding: 12px 0;
-  text-align: right;
-  margin: 5px auto;
-}
-
-button:hover {
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
-}
-table {
-  margin: 10px auto;
-}
-
-th,
-td {
-  white-space: nowrap;
-  text-align: left;
-  padding: 10px 16px;
-}
-th {
-  background-color: rgb(219, 255, 244);
-}
-
-td {
-  cursor: pointer;
-}
-
-article.detail div {
-  padding: 8px;
-  margin: 3px;
-}
-
-article.detail div:nth-of-type(2n) {
   background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(46, 190, 147);
-  width: 40%;
-  border-radius: 5px;
-  text-align: center;
-} */
+}
