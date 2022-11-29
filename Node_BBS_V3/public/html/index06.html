@@ -136,12 +136,14 @@
           생성하여 appendChild 하였다.
 
           그러면 아래의 코드는 새로 appendChild 된 tag 는 그대로 두고 
-          원래 있던 img tag 만 삭제하여 한개의 img tag ㅁ나 남겨두기 
+          원래 있던 img tag 만 삭제하여 한개의 img tag 만 남겨두기 
           */
           document.querySelector("article.img_box img").remove();
         };
-        setTimeout(imgeRemove, 1000);
+
+        setTimeout(imgeRemove, 2000);
       };
+
       const badgeActive = (pos) => {
         const dots = badge_box.querySelectorAll("span.badge");
         for (let dot of dots) {
@@ -155,10 +157,11 @@
         if (controller.tagName === "SPAN") {
           const pos = controller.dataset.index;
           slideIndex = pos;
-        } else if (controller.className === "button left") {
-          slideIndex--;
-          if (slideIndex < 1) slideIndex = imgList.length;
+        } else if (controller.className === "button right") {
+          slideIndex++;
+          if (slideIndex > 1) slideIndex = imgList.length;
         }
+
         badgeActive(slideIndex);
         imageActive(slideIndex);
       });

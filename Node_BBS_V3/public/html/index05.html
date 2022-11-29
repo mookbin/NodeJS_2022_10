@@ -140,7 +140,7 @@
           */
           document.querySelector("article.img_box img").remove();
         };
-        setTimeout(imgeRemove, 1000);
+        setTimeout(imgeRemove, 2000);
       };
       const badgeActive = (pos) => {
         const dots = badge_box.querySelectorAll("span.badge");
@@ -157,6 +157,7 @@
           slideIndex = pos;
         } else if (controller.className === "button left") {
           slideIndex--;
+
           if (slideIndex < 1) slideIndex = imgList.length;
         }
         badgeActive(slideIndex);
@@ -170,6 +171,7 @@
           span.dataset.index = index + 1;
           return span;
         });
+
         badge_box.append(...spans);
         badgeActive(1);
       });
